@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineAtlas</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="buscador">
+                <input id="inputBuscador" type="text" placeholder="Buscar película...">
+                <button id="btnLimpiar" type="button">Limpiar</button>
+                <div id="historialLista"></div>
+            </div>
+            <div class="logo-titulo">
+                <img id="logo" src="./assets/img/logo.webp" alt="Logo CineAtlas">
+                <h1 id="tituloCabecera">CineAtlas</h1>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h3 id="tituloCatalogo">CATÁLOGO</h3>
+
+        <div id="modal" class="modal">
+            <div class="modal-contenido">
+                <button id="cerrarModal">X</button>
+                <div class="modal-superior">
+                    <img id="modalPoster" src="" alt="Poster película">
+                    <div class="modalInfo">
+                        <h2 id="modalTitulo"></h2>
+                        <p id="modalYear"></p>
+                        <p id="modalRating"></p>
+                        <p id="modalOverview"></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <section id="catalogo">
+
+        </section>
+
+        <div class="fila-botones">
+            <div class="contenedor-cargar">
+                <button id="btnCargar" type="button">Cargar más</button>
+            </div>
+            <div class="contenedor-oscuro">
+                <button id="btnOscuro" type="button">Modo oscuro</button>
+            </div>
+        </div>
+
+        <section class="graficos">
+            <div id="mapa"></div>
+            <div id="grafico1">
+                <canvas id="chartGeneros"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo-footer">
+            <img id="logoFooter" src="./assets/img/logo.webp" alt="Logo CineAtlas">
+            <p id="nombreWeb">CineAtlas</p>
+        </div>
+
+        <div class="footer-derecha">
+            <p id="descripcion">Proyecto Integrador · JavaScript Avanzado</p>
+            <p id="autor">Realizado por Pamela Vázquez Rueda</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
